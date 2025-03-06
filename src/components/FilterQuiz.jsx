@@ -8,8 +8,8 @@ function FilterQuiz({ setCategory }) {
             </label>
             <select className="form-select" onChange={(e) => setCategory(e.target.value)}>
                 <option value="All">Toutes</option>
-                <option value="Maths">📐 Maths</option>
-                <option value="Sciences">🔬 Sciences</option>
+                <option value="Math">📐 Maths</option>
+                <option value="Science">🔬 Sciences</option>
                 <option value="Histoire">🏛️ Histoire</option>
             </select>
         </div>

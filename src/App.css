@@ -46,3 +46,15 @@ select {
 button {
   font-size: 16px;
 }
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.selsa-logo {
+  width: 110px;
+  border-radius: 50px;
+  height: auto;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
+}
