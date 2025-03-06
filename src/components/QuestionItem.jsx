@@ -13,7 +13,7 @@ function QuestionItem({ question, index }) {
         <Accordion.Item eventKey={index.toString()} className="p-2">
             <Accordion.Header>
                 <i className="fas fa-question-circle me-2"></i> {question.text}
-                {question.answered && (
+                {question.correct !== null && (
                     <span className={`badge ms-2 ${question.correct ? 'bg-success' : 'bg-danger'}`}>
                         {question.correct ? <i className="fas fa-check-circle"></i> : <i className="fas fa-times-circle"></i>}
                     </span>
@@ -21,7 +21,7 @@ function QuestionItem({ question, index }) {
             </Accordion.Header>
             <Accordion.Body>
                 <p><i className="fas fa-lightbulb"></i> Réponse : {question.answer}</p>
-                {!question.answered && (
+                {question.correct === null && (
                     <div>
                         <Button variant="success" onClick={() => handleAnswer(true)} className="me-2">
                             <i className="fas fa-check"></i> Juste
