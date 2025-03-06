@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 20px;
+
+  &.beige {
+    background-color: #f0e68c;
+    color: #8b4513;
+
+    .container {
+      background-color: #fff8dc;
+      box-shadow: 0 8px 16px rgba(139, 69, 19, 0.2);
+    }
+
+    .score-board {
+      background-color: #fffacd;
+    }
+
+    .custom-select, .btn-outline-success, .btn-outline-danger {
+      border-color: #daa520;
+    }
+
+    .question-item .accordion-button {
+      background-color: #ffe4b5;
+      color: #8b4513;
+
+      &:not(.collapsed) {
+        background-color: #daa520;
+        color: white;
+      }
+    }
+  }
+
+  &.grey {
+    background-color: #e5e5ea;
+    color: #333;
+
+    .container {
+      background-color: #fff;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .score-board {
+      background-color: #f0f2f5;
+    }
+  }
+}
+
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 15px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.selsa-logo {
+  width: 150px;
+  border-radius: 50px;
+  height: auto;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.score-board {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.5rem;
+}
+
+.custom-select {
+  border-radius: 10px;
+  border: 2px solid #3498db;
+  transition: all 0.3s ease;
+
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+  }
+}
+
+.question-item {
+  border: none;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  .accordion-button {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    font-weight: 600;
+
+    &:not(.collapsed) {
+      background-color: #3498db;
+      color: white;
+    }
+  }
+}
+
+.btn-outline-success, .btn-outline-danger {
+  border-radius: 20px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.badge {
+  font-size: 0.8rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 10px;
+  margin-left: 2px;
+}
+
+.theme-toggle-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: white;
+  border-style: double;
+  border-radius: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  .beige & {
+    color: #daa520;
+    border-color: #daa520;
+  }
+
+  .grey & {
+    color: #333;
+    border-color: #333;
+  }
+}
+
+// Styles pour la modal
+.modal-content {
+  background-color: #fff8dc;
+  border-radius: 15px;
+  
+  .modal-header {
+    border-bottom: none;
+    padding: 1.5rem 1.5rem 0.5rem;
+  }
+  
+  .modal-body {
+    padding: 1rem 1.5rem 1.5rem;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  
+  .modal-title {
+    color: #8b4513;
+    font-weight: 600;
+  }
+}
+
+.beige .modal-content {
+  background-color: #fff8dc;
+}
+
+.grey .modal-content {
+  background-color: #f0f2f5;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .theme-toggle-button {
+    top: 10px;
+    right: 10px;
+    font-size: 1.2rem;
+  }
+}
